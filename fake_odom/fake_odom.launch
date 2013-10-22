@@ -1,0 +1,11 @@
+<launch>
+  <node pkg="fake_odom" type="fake_odom_node" name="fake_wheeled_robin"  respawn="true" output="screen">
+    <remap from="cmd_vel" to="mobile_base/commands/velocity"/>
+    <remap from="odom" to="odom2"/>
+  </node>
+  <node pkg="nodelet" type="nodelet" name="mobile_base_nodelet_manager" args="manager"/>
+  <node pkg="nodelet" type="nodelet" name="cmd_vel_mux" args="load cmd_vel_mux/CmdVelMuxNodelet mobile_base_nodelet_manager">
+    <param name="yaml_cfg_file" value="$(find wheeled_robin_bringup)/param/mux.yaml"/>
+    <remap from="cmd_vel_mux/output" to="mobile_base/commands/velocity"/>
+  </node>
+</launch>

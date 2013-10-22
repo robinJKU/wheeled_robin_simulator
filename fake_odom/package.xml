@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package>
+  <name>fake_odom</name>
+  <version>1.0.0</version>
+  <description>The fake_odom package</description>
+
+  <maintainer email="joh.mayr@jku.at">Johannes Mayr</maintainer>
+  <license>BSD</license>
+  <url type="website">http://ros.org/wiki/fake_odom</url>
+  <url type="repository">https://github.com/robinJKU/wheeled_robin_simulator</url>
+  <url type="bugtracker">https://github.com/robinJKU/wheeled_robin_simulator/issues</url>
+  <author email="joh.mayr@jku.at">Johannes Mayr</author>
+  <author email="klemens.springer@jku.at">Klemens Springer</author>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>nav_msgs</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>tf</build_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>nav_msgs</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>tf</run_depend>
+
+  <export>
+  </export>
+</package>
