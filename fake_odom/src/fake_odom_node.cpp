@@ -48,7 +48,7 @@ int main( int argc, char** argv) {
 
 		geometry_msgs::Quaternion odom_quat = tf::createQuaternionMsgFromYaw(th);
 
-		// publish the transform
+		// publish the transform odom --> base_footprint
 		geometry_msgs::TransformStamped odom_trans;
 		odom_trans.header.stamp = current_time;
 		odom_trans.header.frame_id = "odom";
@@ -58,6 +58,18 @@ int main( int argc, char** argv) {
 		odom_trans.transform.translation.z = 0.0;
 		odom_trans.transform.rotation = odom_quat;
 		transform.sendTransform(odom_trans);
+
+		// publish the transform base_footprint --> base_link
+		geometry_msgs::Quaternion base_quat = tf::createQuaternionMsgFromRollPitchYaw(0,vx*0.5,0);
+		geometry_msgs::TransformStamped base_trans;
+		base_trans.header.stamp = current_time;
+		base_trans.header.frame_id = "base_footprint";
+		base_trans.child_frame_id = "base_link";
+		base_trans.transform.translation.x = 0;
+		base_trans.transform.translation.y = 0;
+		base_trans.transform.translation.z = 0.055;
+		base_trans.transform.rotation = base_quat;
+		transform.sendTransform(base_trans);
 
 		// publis /odom
 		nav_msgs::Odometry odom;

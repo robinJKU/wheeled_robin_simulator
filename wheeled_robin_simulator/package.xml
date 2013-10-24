@@ -1,0 +1,20 @@
+<package>
+  <name>wheeled_robin_simulator</name>
+  <version>1.0.0</version>
+  <description>The wheeled_robin_simulator stack provides packages for simulating a WheeledRobin robot.</description>
+  <maintainer email="joh.mayr@jku.at">Johannes Mayr</maintainer>
+  <license>BSD</license>
+  <url type="website">http://ros.org/wiki/wheeled_robin</url>
+  <url type="repository">https://github.com/robinJKU/wheeled_robin_simulator</url>
+  <url type="bugtracker">https://github.com/robinJKU/wheeled_robin_simulator/issues</url>
+  <author email="joh.mayr@jku.at">Johannes Mayr</author>
+  <author email="klemens.springer@jku.at">Klemens Springer</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>fake_odom</run_depend>
+
+  <export>
+    <metapackage/>
+  </export>
+</package>
+
