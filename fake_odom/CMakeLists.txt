@@ -16,7 +16,7 @@ include_directories(
 )
 
 catkin_package(
-  INCLUDE_DIRS include
+#  INCLUDE_DIRS include
   LIBRARIES fake_odom
   CATKIN_DEPENDS geometry_msgs nav_msgs roscpp rospy std_msgs tf sensor_msgs
   DEPENDS
